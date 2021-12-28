@@ -24,6 +24,9 @@ function App() {
           <Route exact path="/contact">
             <Contact />
           </Route>
+          <Route>
+            <Article/>
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>
