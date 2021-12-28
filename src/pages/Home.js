@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useFetch } from "../../data/hooks/useFetch"
 import './Home.css'
 export default function () {
@@ -11,6 +12,7 @@ export default function () {
                <div key = {article.id} className="card">
                    <h3>{article.title}</h3>
                    <p>{article.author}</p>
+                   <Link to ={`/articles/${article.id}`} > Read more... </Link>
                </div>
            ))}
         </div>
