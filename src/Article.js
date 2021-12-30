@@ -15,7 +15,7 @@ const Article = () => {
     history.push("/")
   },2000)
     }
-  },[error])
+  },[error, history])
   return (
     <div>
       {isPending && <div> Loading .... </div>}
