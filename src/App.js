@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Route, Switch , Link, NavLink, Redirect} from 'react-router-dom'
+import { BrowserRouter, Route, Switch, Link, NavLink, Redirect } from 'react-router-dom'
 import Home from './pages/Home'
 import Contact from './pages/Contact';
 import About from './pages/About';
@@ -10,9 +10,9 @@ function App() {
       <BrowserRouter>
         <nav>
           <h1>My Articles</h1>
-        <NavLink exact to ='/' >Home</NavLink>
-        <NavLink to ='/about' >About</NavLink>
-        <NavLink to ='/contact'>Contact</NavLink>
+          <NavLink exact to='/' >Home</NavLink>
+          <NavLink to='/about' >About</NavLink>
+          <NavLink to='/contact'>Contact</NavLink>
         </nav>
         <Switch>
           <Route exact path="/">
@@ -25,12 +25,11 @@ function App() {
             <Contact />
           </Route>
           {/* route parameter below */}
-          <Route path ='/articles/:id'>
-            <Article/>
+          <Route path='/articles/:id'>
+            <Article />
           </Route>
-          <Route path ="*">
-            <Redirect to="/"/>
-
+          <Route path="*">
+            <Redirect to="/" />
           </Route>
         </Switch>
       </BrowserRouter>
